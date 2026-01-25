@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import { ArrowRight, CheckCircle, TrendingUp, Users, MessageSquare } from 'lucide-react';
 import { Canvas } from '@react-three/fiber';
 import { Environment } from '@react-three/drei';
-import Navbar from '../Components/Navbar';
 import { Button } from "@/components/ui/button";
 import { HeroHighlight } from "@/components/ui/hero-highlight";
 import { AnimatedSphere } from '@/components/AnimatedSphere';
+import Navbar from '../components/Navbar';
 
 const Home = () => {
     return (
