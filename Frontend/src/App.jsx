@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Auth from './pages/Auth';
 
-import './App.css'; // Leaving it but likely unused or empty
 import { Toaster } from 'sonner';
+import Dashboard from './pages/Dashboard';
+import Jobs from './pages/Jobs';
+import UploadCandidate from './pages/UploadCandidate';
+import Candidates from './pages/Candidates';
 
 function App() {
   return (
@@ -14,6 +17,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/jobs" element={<Jobs />} />
+          <Route path="/jobs/:jobId/upload" element={<UploadCandidate />} />
+          <Route path="/candidates" element={<Candidates />} />
         </Routes>
       </div>
     </Router>

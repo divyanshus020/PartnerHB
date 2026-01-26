@@ -27,7 +27,7 @@ const Home = () => {
                         </span>
                         <h1 className="text-4xl lg:text-7xl font-bold tracking-tight text-neutral-900 dark:text-white leading-[1.1]">
                             Boost Your Placements, <br />
-                            <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600">
+                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600">
                                 Revenue Effortlessly.
                             </span>
                         </h1>
