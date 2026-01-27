@@ -37,7 +37,7 @@ const DashboardLayout = ({ children }) => {
             {/* Sidebar */}
             <aside className={`${isSidebarOpen ? 'w-64' : 'w-20'} transition-all duration-300 bg-white dark:bg-neutral-900 border-r border-border flex flex-col z-50`}>
                 <div className="p-6 flex items-center justify-between">
-                    {isSidebarOpen && <span className="font-bold text-xl text-primary">PartnerHB</span>}
+                    {isSidebarOpen && <Link to="/dashboard" className="font-bold text-xl text-primary">PartnerHB</Link>}
                     <button onClick={() => setSidebarOpen(!isSidebarOpen)}><Menu size={20}/></button>
                 </div>
 

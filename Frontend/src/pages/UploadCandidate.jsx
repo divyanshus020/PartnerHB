@@ -2,11 +2,9 @@ import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import DashboardLayout from '../components/DashboardLayout';
 import { Button } from "@/components/ui/button";
-// import { Input } from "@/components/ui/input";
-// import { Progress } from "@/components/ui/progress"; // Assuming shadcn progress
 import api from '../services/api';
 import { toast } from 'sonner';
-import { Upload, FileText, X } from 'lucide-react';
+import { Upload, FileText, X, AlertCircle } from 'lucide-react';
 
 const UploadCandidate = () => {
     const { jobId } = useParams();
@@ -78,12 +76,25 @@ const UploadCandidate = () => {
 
     return (
         <DashboardLayout>
+// import { Input } from "@/components/ui/input";
+// import { Progress } from "@/components/ui/progress"; // Assuming shadcn progress
             <div className="max-w-2xl mx-auto space-y-6">
                 <div className="text-center space-y-2">
                     <h1 className="text-3xl font-bold">Bulk Upload Resumes</h1>
                     <p className="text-muted-foreground">Select multiple resumes. Our AI will parse details automatically.</p>
                 </div>
-
+                <div className="bg-amber-50 border-l-4 border-amber-400 p-4 rounded-r-xl mb-6 flex items-start gap-3">
+                    <div className="text-amber-600 mt-0.5">
+                        <AlertCircle size={20} />
+                    </div>
+                    <div>
+                        <p className="text-sm text-amber-800 font-medium">Smart Deduplication Active</p>
+                        <p className="text-xs text-amber-700 mt-1">
+                            If a candidate has already been submitted for this job, their existing profile 
+                            will be updated with the new resume and AI analysis. No duplicate entries will be created.
+                        </p>
+                    </div>
+                </div>
                 <div className="border-2 border-dashed border-indigo-200 dark:border-neutral-800 rounded-3xl p-12 text-center bg-white dark:bg-neutral-900">
                     <input 
                         type="file" id="bulk-file" multiple accept=".pdf" 
