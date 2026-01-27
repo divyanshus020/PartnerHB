@@ -35,24 +35,43 @@ const UploadCandidate = () => {
     const handleBulkUpload = async () => {
         if (files.length === 0) return;
         setUploading(true);
+        setProgress(0);
+        
         let successCount = 0;
+        const BATCH_SIZE = 10;
 
-        for (let i = 0; i < files.length; i++) {
+        // Iterate through the files in chunks of BATCH_SIZE
+        for (let i = 0; i < files.length; i += BATCH_SIZE) {
+            const chunk = files.slice(i, i + BATCH_SIZE);
+            
+            // Prepare the FormData for this batch
             const data = new FormData();
-            data.append('resume', files[i]);
-            // Backend takes Name/Email from Resume parsing, so we send placeholders or empty
-            data.append('name', files[i].name.replace(/\.[^/.]+$/, "")); 
+            chunk.forEach((file) => {
+                data.append('resumes', file); // Matches the backend key
+            });
+            data.append('source', 'PARTNER_BULK_UPLOAD');
 
             try {
-                await api.post(`/partner/jobs/${jobId}/upload`, data);
-                successCount++;
-                setProgress(((i + 1) / files.length) * 100);
+                // Send the batch of 10
+                const response = await api.post(`/partner/jobs/${jobId}/upload`, data, {
+                    headers: { 'Content-Type': 'multipart/form-data' }
+                });
+
+                if (response.data.success) {
+                    successCount += chunk.length;
+                }
+
+                // Update progress based on total files processed
+                const completedSoFar = Math.min(i + BATCH_SIZE, files.length);
+                setProgress((completedSoFar / files.length) * 100);
+
             } catch (err) {
-                console.error(`Failed to upload ${files[i].name}`);
+                console.error(`Batch starting at ${i} failed:`, err.response?.data || err.message);
+                toast.error(`Error in batch starting at file ${i + 1}`);
             }
         }
 
-        toast.success(`Successfully uploaded ${successCount} candidates!`);
+        toast.success(`Successfully queued ${successCount} candidates!`);
         setUploading(false);
         setFiles([]);
     };
