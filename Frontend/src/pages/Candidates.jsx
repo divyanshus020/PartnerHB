@@ -5,12 +5,13 @@ import { Badge } from "@/components/ui/badge"; // Ensure you have a Badge compon
 import { FileText, Search, User, Briefcase, Clock } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import api from '../services/api';
+import { useNavigate } from 'react-router-dom';
 
 const Candidates = () => {
     const [candidates, setCandidates] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(true);
-
+    const navigate=useNavigate();
     useEffect(() => {
         const fetchUploads = async () => {
             try {
@@ -81,12 +82,15 @@ const Candidates = () => {
                                     filteredCandidates.map((c) => (
                                         <tr key={c._id} className="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/30 transition-colors">
                                             <td className="p-4">
-                                                <div className="flex items-center gap-3">
-                                                    <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-primary">
+                                                <div 
+                                                    className="flex items-center gap-3 cursor-pointer group"
+                                                    onClick={() => navigate(`/candidates/${c._id}`)}
+                                                >
+                                                    <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
                                                         <User size={16} />
                                                     </div>
                                                     <div>
-                                                        <div className="font-medium">{c.name}</div>
+                                                        <div className="font-medium group-hover:text-primary group-hover:underline">{c.name}</div>
                                                         <div className="text-xs text-muted-foreground">{c.email}</div>
                                                     </div>
                                                 </div>

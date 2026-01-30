@@ -8,6 +8,8 @@ import Dashboard from './pages/Dashboard';
 import Jobs from './pages/Jobs';
 import UploadCandidate from './pages/UploadCandidate';
 import Candidates from './pages/Candidates';
+import JobDetails from './pages/JobDetails';
+import CandidateProfile from './pages/CandidateProfile';
 
 function App() {
   return (
@@ -19,8 +21,10 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/jobs" element={<Jobs />} />
+          <Route path="/jobs/:id" element={<JobDetails />} />
           <Route path="/jobs/:jobId/upload" element={<UploadCandidate />} />
           <Route path="/candidates" element={<Candidates />} />
+          <Route path="/candidates/:id" element={<CandidateProfile />} />
         </Routes>
       </div>
     </Router>
