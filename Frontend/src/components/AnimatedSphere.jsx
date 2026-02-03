@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { useFrame } from '@react-three/fiber';
 import { Sphere, MeshDistortMaterial } from '@react-three/drei';
 
-export const AnimatedSphere = () => {
+export const AnimatedSphere = ({ color = "#818cf8", scale = 2.5, distort = 0.4, speed = 2 }) => {
     const mesh = useRef(null);
 
     useFrame((state) => {
@@ -14,13 +14,14 @@ export const AnimatedSphere = () => {
     });
 
     return (
-        <Sphere args={[1, 100, 200]} scale={2.5} ref={mesh}>
+        <Sphere args={[1, 100, 200]} scale={scale} ref={mesh}>
             <MeshDistortMaterial
-                color="#818cf8"
+                color={color}
                 attach="material"
-                distort={0.4}
-                speed={1.5}
-                roughness={0.4}
+                distort={distort}
+                speed={speed}
+                roughness={0.2}
+                metalness={0.8}
             />
         </Sphere>
     );
