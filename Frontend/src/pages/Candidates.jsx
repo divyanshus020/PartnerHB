@@ -11,7 +11,7 @@ const Candidates = () => {
     const [candidates, setCandidates] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
     const [loading, setLoading] = useState(true);
-    const navigate=useNavigate();
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchUploads = async () => {
             try {
@@ -27,7 +27,7 @@ const Candidates = () => {
     }, []);
 
     // Filter candidates based on search input
-    const filteredCandidates = candidates.filter(c => 
+    const filteredCandidates = candidates.filter(c =>
         c.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         c.jobId?.jobTitle.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -48,12 +48,12 @@ const Candidates = () => {
                     <h1 className="text-3xl font-bold">My Uploads</h1>
                     <p className="text-muted-foreground">Track the status of candidates you've submitted.</p>
                 </div>
-                
+
                 <div className="relative w-full md:w-72">
                     <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-                    <Input 
-                        placeholder="Search candidates or jobs..." 
-                        className="pl-10" 
+                    <Input
+                        placeholder="Search candidates or jobs..."
+                        className="pl-10"
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                     />
@@ -82,7 +82,7 @@ const Candidates = () => {
                                     filteredCandidates.map((c) => (
                                         <tr key={c._id} className="hover:bg-neutral-50/50 dark:hover:bg-neutral-800/30 transition-colors">
                                             <td className="p-4">
-                                                <div 
+                                                <div
                                                     className="flex items-center gap-3 cursor-pointer group"
                                                     onClick={() => navigate(`/candidates/${c._id}`)}
                                                 >
@@ -113,9 +113,9 @@ const Candidates = () => {
                                                 </span>
                                             </td>
                                             <td className="p-4">
-                                                <a 
-                                                    href={`${import.meta.env.VITE_SERVER_URL}${c.resumeUrl}`} 
-                                                    target="_blank" 
+                                                <a
+                                                    href={`${import.meta.env.VITE_BACKEND_URL}${c.resumeUrl}`}
+                                                    target="_blank"
                                                     rel="noreferrer"
                                                     className="text-primary hover:text-indigo-600 transition-colors"
                                                 >
