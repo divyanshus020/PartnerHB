@@ -17,10 +17,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'Workflow', path: '/#workflow' },
-    { name: 'Partners', path: '/#partners' },
-    { name: 'Success Stories', path: '/#stories' },
+    { name: 'For Employers', path: '/' },
+    { name: 'For Job Seekers', path: '/#seekers' },
+    { name: 'Pricing', path: '/#pricing' },
+    { name: 'Careers', path: '/#careers' },
   ];
 
   return (
@@ -50,7 +50,7 @@ const Navbar = () => {
               <Link to="/auth">Login</Link>
             </Button>
             <Button className="bg-indigo-600 hover:bg-indigo-700 shadow-xl shadow-indigo-500/30 rounded-full px-8 font-bold uppercase italic text-xs tracking-widest h-11" asChild>
-              <Link to="/auth">Join Network</Link>
+              <Link to="/auth">Get Started</Link>
             </Button>
           </div>
         </div>
@@ -88,7 +88,7 @@ const Navbar = () => {
                 <Link to="/auth" onClick={() => setIsOpen(false)}>Login</Link>
               </Button>
               <Button className="w-full bg-indigo-600 text-lg h-14 rounded-2xl font-black uppercase italic" asChild>
-                <Link to="/auth" onClick={() => setIsOpen(false)}>Join as Partner</Link>
+                <Link to="/auth" onClick={() => setIsOpen(false)}>Get Started</Link>
               </Button>
             </div>
           </motion.div>
