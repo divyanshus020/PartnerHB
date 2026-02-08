@@ -141,33 +141,27 @@ const Home = () => {
                         >
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-600 dark:text-indigo-400 text-sm font-semibold w-fit backdrop-blur-sm">
                                 <Sparkles size={16} className="animate-pulse" />
-                                <span>PartnersHB Agency Network</span>
+                                <span>Hiring Bazaar Partner Network</span>
                             </div>
 
-                            <h1 className="text-6xl lg:text-8xl font-black tracking-tighter leading-[0.9] uppercase italic text-neutral-900 dark:text-white">
-                                Expand your <br />
-                                <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                                    Recruitment <br /> Revenue
-                                </span>
+                            <h1 className="text-5xl lg:text-7xl font-semibold tracking-tight leading-[1.05] text-neutral-900 dark:text-white">
+                                Become a Hiring Bazaar Partner
                             </h1>
 
                             <div className="space-y-4">
-                                <h2 className="text-2xl lg:text-3xl font-bold text-neutral-700 dark:text-neutral-300 normal-case">
-                                    Your gateway to more clients, better earnings.
-                                </h2>
-                                <p className="text-lg text-muted-foreground leading-relaxed max-w-xl normal-case">
-                                    Access exclusive job opportunities matched to your expertise. We connect you with companies actively hiring — you focus on what you do best.
+                                <p className="text-xl lg:text-2xl text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-2xl">
+                                    Place more candidates, get new clients , and earn more — without increasing team size.
                                 </p>
                             </div>
 
                             <div className="flex flex-wrap gap-5 pt-4">
                                 <Button size="lg" className="rounded-full px-10 text-lg h-16 bg-indigo-600 hover:bg-indigo-700 shadow-2xl shadow-indigo-500/40 group transition-all duration-300 hover:scale-105 active:scale-95" asChild>
                                     <Link to="/auth">
-                                        Join as Partner <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                        Apply as a Partner <ArrowRight className="ml-2 w-6 h-6 group-hover:translate-x-1 transition-transform" />
                                     </Link>
                                 </Button>
                                 <Button size="lg" variant="outline" className="rounded-full px-10 text-lg h-16 border-2 backdrop-blur-sm hover:bg-white/10 transition-all duration-300" asChild>
-                                    <a href="#workflow">Explore Workflow</a>
+                                    <a href="https://hiringbazaar.in" target="_blank" rel="noreferrer">Visit hiringbazaar.in</a>
                                 </Button>
                             </div>
                         </motion.div>
