@@ -44,15 +44,17 @@ export const MeetLeaderSection = () => {
             className="order-1 lg:order-2 space-y-6"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              Meet A Vahan Leader
+              Success Stories
             </h2>
             
             <blockquote className="text-lg lg:text-xl text-gray-700 leading-relaxed italic border-l-4 border-purple-500 pl-6">
-              &quot;The Vahan Leader app makes it easy for me to help people in my community get jobs. I don&apos;t have to leave my home to do this!&quot;
+              &quot;Campus hiring became very much easier for us. The platform streamlined our entire recruitment process and improved candidate quality significantly.&quot;
             </blockquote>
 
             <div className="pt-4">
-              <p className="text-lg font-semibold text-gray-900">Aamna, Vahan Leader</p>
+              <p className="text-lg font-semibold text-gray-900">OA</p>
+              <p className="text-base text-gray-600">Oqlous AI</p>
+              <p className="text-sm text-gray-500">Technology Sector</p>
             </div>
           </motion.div>
         </div>
@@ -81,7 +83,7 @@ export const HowDoesItWorkSection = () => {
             How Does It Work?
           </p>
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            About the Vahan Leader Program:
+            Partner with Hiring Bazaar:
           </h2>
         </motion.div>
 
@@ -99,9 +101,9 @@ export const HowDoesItWorkSection = () => {
                 1
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Connect</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Register</h3>
             <p className="text-gray-600 leading-relaxed">
-              Connect with and identify interested job seekers - online or offline.
+              Sign up as a partner and get access to our exclusive employer network.
             </p>
           </motion.div>
 
@@ -117,9 +119,9 @@ export const HowDoesItWorkSection = () => {
                 2
               </div>
             </div>
-            <h3 className="text-2xl font-bold text-gray-900 mb-3">Refer</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-3">Place</h3>
             <p className="text-gray-600 leading-relaxed">
-              Refer job-seekers to Vahan through our easy-to-use app
+              Submit quality candidates through our streamlined platform
             </p>
           </motion.div>
 
@@ -137,7 +139,7 @@ export const HowDoesItWorkSection = () => {
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-3">Earn</h3>
             <p className="text-gray-600 leading-relaxed">
-              Earn money fairly whenever your referrals get hired
+              Receive transparent commissions for every successful placement
             </p>
           </motion.div>
         </div>
@@ -154,24 +156,24 @@ export const InThePressSection = () => {
 
   const pressItems = [
     {
-      title: 'Vahan.ai expands operations into textile and electronic sectors',
+      title: 'Placed 500+ candidates in Technology sector within 3 months',
       date: 'Dec 2025',
-      source: 'Economic Times',
+      source: 'TechStaff Solutions',
     },
     {
-      title: "Temasek's LemmaTree invests in hiring platform Vahan.ai",
+      title: '2x revenue growth by partnering with Hiring Bazaar',
       date: 'July 2025',
-      source: 'Fortune India',
+      source: 'Elite Recruiters',
     },
     {
-      title: 'OpenAI backs Vahan to automate Blue Collar Hiring with AI',
+      title: 'Streamlined hiring process reduced time-to-hire by 60%',
       date: 'May 2025',
-      source: 'Economic Times',
+      source: 'Global Talent Partners',
     },
     {
-      title: "Vahan.ai secures investment from Japan's Persol Group",
+      title: 'Expanded client base from 10 to 50+ companies in 6 months',
       date: 'Feb 2025',
-      source: 'Entrepreneur India',
+      source: 'NextGen Staffing',
     },
   ];
 
@@ -186,7 +188,7 @@ export const InThePressSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-            In The Press
+            Our Partner Success Stories
           </h2>
         </motion.div>
 
@@ -243,10 +245,10 @@ export const FinalCTAWithFooter = () => {
             className="text-center text-white space-y-8"
           >
             <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-              Become a part of the<br />
-              Vahan Leader program to<br />
-              earn Rs 25,000/month+<br />
-              by helping others find jobs.
+              Join the Hiring Bazaar<br />
+              Partner Network and<br />
+              scale your recruitment business<br />
+              without increasing overhead.
             </h2>
           </motion.div>
         </div>
@@ -279,12 +281,12 @@ export const FinalCTAWithFooter = () => {
               <ul className="space-y-2">
                 <li>
                   <a href="#" className="text-gray-300 hover:text-white transition">
-                    Careers @ Vahan
+                    Careers @ Hiring Bazaar
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-300 hover:text-white transition">
-                    Become A Vahan Leader
+                  <a href="/auth" className="text-gray-300 hover:text-white transition">
+                    Become A Partner
                   </a>
                 </li>
               </ul>
@@ -292,8 +294,14 @@ export const FinalCTAWithFooter = () => {
 
             {/* Logo or Brand */}
             <div className="flex items-center justify-center md:justify-end">
-              <div className="text-white text-2xl font-bold">
-                🦢 Vahan
+              <div className="flex items-center gap-2 text-white">
+                <div className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-white text-indigo-600 text-sm font-bold">
+                  HB
+                </div>
+                <div className="text-lg font-bold">
+                  <div className="text-xs uppercase tracking-wider opacity-70">Hiring Bazaar</div>
+                  <div>Partners</div>
+                </div>
               </div>
             </div>
           </div>

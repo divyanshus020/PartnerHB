@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { User, Phone, Mail, Building, Lock, ArrowLeft, Loader2 } from 'lucide-react';
+import { User, Phone, Mail, Building, Lock, ArrowLeft, Loader2, Home } from 'lucide-react';
 import { toast } from 'sonner';
 import { authService } from '../services/auth.service';
 import { Button } from "@/components/ui/button";
@@ -106,7 +106,16 @@ const Auth = () => {
 };
 
     return (
-        <div className="min-h-screen w-full flex bg-background text-foreground overflow-hidden">
+        <div className="min-h-screen w-full flex bg-background text-foreground overflow-hidden relative">
+            {/* Home Button - Top Left */}
+            <Link 
+                to="/" 
+                className="absolute top-6 left-6 z-50 flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-neutral-900 border border-neutral-200 dark:border-white/10 shadow-lg hover:shadow-xl transition-all hover:scale-105 group"
+            >
+                <Home className="w-5 h-5 text-indigo-600 group-hover:text-indigo-700" />
+                <span className="text-sm font-semibold text-neutral-700 dark:text-neutral-300">Home</span>
+            </Link>
+
             {/* Left Panel: Aesthetic Background */}
             <div className="hidden lg:flex w-1/2 bg-neutral-900 relative items-center justify-center p-12 overflow-hidden">
                 <div className="absolute inset-0 bg-dot-white/[0.2] z-0"></div>

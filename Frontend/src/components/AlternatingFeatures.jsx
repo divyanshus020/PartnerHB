@@ -62,19 +62,17 @@ export const EarningsSection = () => {
             className="space-y-6 pl-8 lg:pl-32"
           >
             <motion.div variants={itemVariants}>
-              <motion.p variants={itemVariants} className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
-                STABLE EARNINGS
-              </motion.p>
-              <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                Earn up to<br />
-                Rs 10 Lacs/month
+              <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                Transform Hiring Chaos<br />
+                Into a Steady Pipeline<br />
+                Of Desired Candidates
               </motion.h2>
             </motion.div>
 
             <div className="space-y-6">
               <div>
                 <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
-                  Timely, Regular Payments
+                  Streamlined Candidate Pipeline
                 </motion.h3>
                 <motion.ul
                   className="space-y-3"
@@ -85,13 +83,13 @@ export const EarningsSection = () => {
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
                     <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
-                      Improve cash flow with 10-day payment cycles
+                      Access verified, pre-screened candidates from our network
                     </span>
                   </motion.li>
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
                     <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
-                      Our Payment Record: <strong>99.5%</strong> of all payments made on-time
+                      AI-powered matching ensures quality candidates for every role
                     </span>
                   </motion.li>
                 </motion.ul>
@@ -99,7 +97,7 @@ export const EarningsSection = () => {
 
               <div>
                 <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
-                  Business Stability & Financing
+                  Simplified Partner Operations
                 </motion.h3>
                 <motion.ul
                   className="space-y-3"
@@ -110,13 +108,13 @@ export const EarningsSection = () => {
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
                     <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
-                      &apos;Minimum Business&apos; Guarantee Plans
+                      Real-time dashboard to track all placements and earnings
                     </span>
                   </motion.li>
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
                     <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
-                      Get access to Micro loans to scale your own operations
+                      Transparent commission structure with timely payouts
                     </span>
                   </motion.li>
                 </motion.ul>
@@ -302,7 +300,7 @@ export const ScaleUpSupportSection = () => {
               </motion.p>
 
               <motion.p variants={itemVariants} className="text-lg text-gray-700">
-                <strong>Partner with Vahan</strong> to help you grow<br />
+                <strong>Partner with Hiring Bazaar</strong> to help you grow<br />
                 your team or leads database.
               </motion.p>
 
@@ -393,14 +391,14 @@ export const EntrepreneurSection = () => {
                   Let&apos;s get growing
                 </motion.h3>
                 <motion.p variants={itemVariants} className="text-lg text-gray-700 leading-relaxed">
-                  As a Vahan Leader, you can work from home<br />
-                  and make use of your network of contacts.
+                  As a Hiring Bazaar Partner, you can work from anywhere<br />
+                  and leverage your network of contacts.
                 </motion.p>
               </motion.div>
 
               <motion.p variants={itemVariants} className="text-lg text-gray-700 leading-relaxed">
-                Easily refer, earn, and track earnings with the<br />
-                easy-to-use Vahan Leaders app.
+                Easily submit candidates, earn commissions, and track placements<br />
+                with our intuitive PartnerHB platform.
               </motion.p>
 
               <motion.div variants={itemVariants} className="pt-6">
