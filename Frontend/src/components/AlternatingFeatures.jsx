@@ -1,5 +1,9 @@
 import { motion } from 'framer-motion';
 import { useScrollReveal } from '@/hooks/useScrollReveal';
+import Part2 from '@/assets/Part2.png';
+import Part3 from '@/assets/Part3.png';
+import Part4 from '@/assets/Part4.png';
+import Workflow from '@/assets/Workflow.png';
 
 // Container for staggering all children
 const containerVariants = {
@@ -48,7 +52,7 @@ export const EarningsSection = () => {
       {/* Decorative dots */}
       <div className="absolute top-8 left-8 grid grid-cols-5 gap-3 opacity-50">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="w-2 h-2 rounded-full bg-teal-400" />
+          <div key={i} className="w-2 h-2 rounded-full bg-emerald-400" />
         ))}
       </div>
 
@@ -59,65 +63,52 @@ export const EarningsSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
-            className="space-y-6 pl-8 lg:pl-32"
+            className="space-y-6 lg:pl-16 xl:pl-32"
           >
             <motion.div variants={itemVariants}>
               <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                Transform Hiring Chaos<br />
-                Into a Steady Pipeline<br />
-                Of Desired Candidates
+                Workflow
               </motion.h2>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               <div>
-                <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
-                  Streamlined Candidate Pipeline
+                <motion.h3 variants={itemVariants} className="text-xl font-bold text-emerald-600 mb-3 uppercase tracking-wide">
+                  How It Works
                 </motion.h3>
-                <motion.ul
-                  className="space-y-3"
-                  variants={listVariants}
-                  initial="hidden"
-                  animate={isVisible ? 'visible' : 'hidden'}
-                >
-                  <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
-                    <span className="text-gray-700">
-                      Access verified, pre-screened candidates from our network
-                    </span>
-                  </motion.li>
-                  <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
-                    <span className="text-gray-700">
-                      AI-powered matching ensures quality candidates for every role
-                    </span>
-                  </motion.li>
-                </motion.ul>
-              </div>
+                <div className="space-y-6">
+                  <motion.div variants={itemVariants} className="flex gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">1</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900">Get Hiring Requirements</h4>
+                      <p className="text-gray-600">We assign verified job openings from companies.</p>
+                    </div>
+                  </motion.div>
 
-              <div>
-                <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
-                  Simplified Partner Operations
-                </motion.h3>
-                <motion.ul
-                  className="space-y-3"
-                  variants={listVariants}
-                  initial="hidden"
-                  animate={isVisible ? 'visible' : 'hidden'}
-                >
-                  <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
-                    <span className="text-gray-700">
-                      Real-time dashboard to track all placements and earnings
-                    </span>
-                  </motion.li>
-                  <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
-                    <span className="text-gray-700">
-                      Transparent commission structure with timely payouts
-                    </span>
-                  </motion.li>
-                </motion.ul>
+                  <motion.div variants={itemVariants} className="flex gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">2</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900">Source Candidates</h4>
+                      <p className="text-gray-600">Use your network or database to find suitable candidates.</p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div variants={itemVariants} className="flex gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">3</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900">Submit Through Platform</h4>
+                      <p className="text-gray-600">Upload candidates securely with contact protection.</p>
+                    </div>
+                  </motion.div>
+
+                  <motion.div variants={itemVariants} className="flex gap-4">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">4</div>
+                    <div>
+                      <h4 className="font-bold text-gray-900">Earn on Placement</h4>
+                      <p className="text-gray-600">Get paid when your candidate is successfully hired.</p>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -129,11 +120,8 @@ export const EarningsSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-purple-200 to-blue-300 rounded-3xl soft-shadow flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">💻</div>
-                <p className="text-lg font-semibold">Dashboard Image Here</p>
-              </div>
+            <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white rounded-3xl soft-shadow flex items-center justify-center overflow-hidden border border-emerald-100">
+              <img src={Workflow} alt="Workflow Dashboard" className="w-full h-full object-contain p-4 md:p-8" />
             </div>
           </motion.div>
         </div>
@@ -153,7 +141,7 @@ export const ProfessionalToolsSection = () => {
       {/* Decorative dots */}
       <div className="absolute top-8 left-8 grid grid-cols-5 gap-3 opacity-50">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="w-2 h-2 rounded-full bg-teal-400" />
+          <div key={i} className="w-2 h-2 rounded-full bg-emerald-400" />
         ))}
       </div>
 
@@ -166,11 +154,8 @@ export const ProfessionalToolsSection = () => {
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1 relative"
           >
-            <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-gray-700 to-gray-900 rounded-3xl soft-shadow flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">📱</div>
-                <p className="text-lg font-semibold">Mobile App Image Here</p>
-              </div>
+            <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white rounded-3xl soft-shadow flex items-center justify-center overflow-hidden border border-emerald-100">
+              <img src={Part2} alt="Professional Tools" className="w-full h-full object-contain p-4 md:p-8" />
             </div>
           </motion.div>
 
@@ -179,7 +164,7 @@ export const ProfessionalToolsSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
-            className="order-1 lg:order-2 space-y-6 pl-8 lg:pl-32"
+            className="order-1 lg:order-2 space-y-6 lg:pl-16 xl:pl-32"
           >
             <motion.div variants={itemVariants}>
               <motion.p variants={itemVariants} className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
@@ -193,7 +178,7 @@ export const ProfessionalToolsSection = () => {
 
             <div className="space-y-6">
               <div>
-                <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
+                <motion.h3 variants={itemVariants} className="text-xl font-bold text-emerald-600 mb-3">
                   Candidate Tracking
                 </motion.h3>
                 <motion.ul
@@ -203,19 +188,19 @@ export const ProfessionalToolsSection = () => {
                   animate={isVisible ? 'visible' : 'hidden'}
                 >
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
                       Track the entire recruitment process
                     </span>
                   </motion.li>
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
                       Candidate status updates in near real-time
                     </span>
                   </motion.li>
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
                       Performance and Payout Dashboards to track earnings.
                     </span>
@@ -224,7 +209,7 @@ export const ProfessionalToolsSection = () => {
               </div>
 
               <div>
-                <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
+                <motion.h3 variants={itemVariants} className="text-xl font-bold text-emerald-600 mb-3">
                   Automation
                 </motion.h3>
                 <motion.ul
@@ -234,13 +219,13 @@ export const ProfessionalToolsSection = () => {
                   animate={isVisible ? 'visible' : 'hidden'}
                 >
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
                       With features like telephony integration, bulk referrals and more
                     </span>
                   </motion.li>
                   <motion.li className="flex items-start gap-3" variants={listItemVariants}>
-                    <span className="w-2 h-2 rounded-full bg-purple-600 mt-2 flex-shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-emerald-600 mt-2 flex-shrink-0" />
                     <span className="text-gray-700">
                       Already integrated with the top employers
                     </span>
@@ -266,7 +251,7 @@ export const ScaleUpSupportSection = () => {
       {/* Decorative dots */}
       <div className="absolute top-8 left-8 grid grid-cols-5 gap-3 opacity-50">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="w-2 h-2 rounded-full bg-teal-400" />
+          <div key={i} className="w-2 h-2 rounded-full bg-emerald-400" />
         ))}
       </div>
 
@@ -277,7 +262,7 @@ export const ScaleUpSupportSection = () => {
             variants={containerVariants}
             initial="hidden"
             animate={isVisible ? 'visible' : 'hidden'}
-            className="space-y-6 pl-8 lg:pl-32"
+            className="space-y-6 lg:pl-16 xl:pl-32"
           >
             <motion.div variants={itemVariants}>
               <motion.p variants={itemVariants} className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
@@ -295,24 +280,24 @@ export const ScaleUpSupportSection = () => {
                 big companies, and high-tech startups.
               </motion.p>
 
-              <motion.p variants={itemVariants} className="text-lg text-gray-700">
+              {/* <motion.p variants={itemVariants} className="text-lg text-gray-700">
                 Dedicated Account managers to support you.
-              </motion.p>
+              </motion.p> */}
 
               <motion.p variants={itemVariants} className="text-lg text-gray-700">
                 <strong>Partner with Hiring Bazaar</strong> to help you grow<br />
-                your team or leads database.
+                your team.
               </motion.p>
 
               <motion.div variants={itemVariants} className="pt-6">
                 <a
                   href="#"
-                  className="inline-flex items-center text-lg font-semibold text-amber-600 hover:text-amber-700 transition-colors group"
+                  className="inline-flex items-center text-lg font-semibold text-emerald-600 hover:text-emerald-700 transition-colors group"
                 >
                   Get Started
                   <span className="ml-2 text-2xl group-hover:translate-x-1 transition-transform">›</span>
                 </a>
-                <div className="h-0.5 w-32 bg-amber-600 mt-1" />
+                <div className="h-0.5 w-32 bg-emerald-600 mt-1" />
               </motion.div>
             </motion.div>
           </motion.div>
@@ -324,11 +309,8 @@ export const ScaleUpSupportSection = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="relative"
           >
-            <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-amber-200 to-orange-300 rounded-3xl soft-shadow flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">👥</div>
-                <p className="text-lg font-semibold">Team Image Here</p>
-              </div>
+            <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white rounded-3xl soft-shadow flex items-center justify-center overflow-hidden border border-emerald-100">
+              <img src={Part3} alt="Scale-up Support" className="w-full h-full object-contain p-4 md:p-8" />
             </div>
           </motion.div>
         </div>
@@ -348,7 +330,7 @@ export const EntrepreneurSection = () => {
       {/* Decorative dots */}
       <div className="absolute top-8 left-8 grid grid-cols-5 gap-3 opacity-50">
         {[...Array(50)].map((_, i) => (
-          <div key={i} className="w-2 h-2 rounded-full bg-teal-400" />
+          <div key={i} className="w-2 h-2 rounded-full bg-emerald-400" />
         ))}
       </div>
 
@@ -361,11 +343,8 @@ export const EntrepreneurSection = () => {
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-1 relative"
           >
-            <div className="w-full h-96 lg:h-[500px] bg-gradient-to-br from-blue-200 to-indigo-300 rounded-3xl soft-shadow flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">☕</div>
-                <p className="text-lg font-semibold">Entrepreneur Image Here</p>
-              </div>
+            <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-white rounded-3xl soft-shadow flex items-center justify-center overflow-hidden border border-emerald-100">
+              <img src={Part4} alt="Partner Growth" className="w-full h-full object-contain p-4 md:p-8" />
             </div>
           </motion.div>
 
@@ -378,16 +357,16 @@ export const EntrepreneurSection = () => {
           >
             <motion.div variants={itemVariants}>
               <motion.p variants={itemVariants} className="text-sm font-bold text-gray-800 uppercase tracking-wider mb-3">
-                BUILD & GROW FROM ZERO
+                Become a
               </motion.p>
               <motion.h2 variants={itemVariants} className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-                Entrepreneur?
+                Hiring Partner
               </motion.h2>
             </motion.div>
 
             <motion.div className="space-y-6">
               <motion.div>
-                <motion.h3 variants={itemVariants} className="text-xl font-bold text-purple-600 mb-3">
+                <motion.h3 variants={itemVariants} className="text-xl font-bold text-emerald-600 mb-3">
                   Let&apos;s get growing
                 </motion.h3>
                 <motion.p variants={itemVariants} className="text-lg text-gray-700 leading-relaxed">
@@ -404,12 +383,12 @@ export const EntrepreneurSection = () => {
               <motion.div variants={itemVariants} className="pt-6">
                 <a
                   href="#"
-                  className="inline-flex items-center text-lg font-semibold text-amber-600 hover:text-amber-700 transition-colors group"
+                  className="inline-flex items-center text-lg font-semibold text-emerald-600 hover:text-emerald-700 transition-colors group"
                 >
                   Get Started Now
                   <span className="ml-2 text-2xl group-hover:translate-x-1 transition-transform">›</span>
                 </a>
-                <div className="h-0.5 w-40 bg-amber-600 mt-1" />
+                <div className="h-0.5 w-40 bg-emerald-600 mt-1" />
               </motion.div>
             </motion.div>
           </motion.div>

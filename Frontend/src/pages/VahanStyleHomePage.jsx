@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import { HeroSection } from '../components/HeroSection';
 import { EarningsSection, ProfessionalToolsSection, ScaleUpSupportSection, EntrepreneurSection } from '../components/AlternatingFeatures';
-import { MeetLeaderSection, HowDoesItWorkSection, InThePressSection, FinalCTAWithFooter } from '../components/VahanStyleSections';
+import { MeetLeaderSection, InThePressSection, FinalCTAWithFooter } from '../components/VahanStyleSections';
 import { LoadingSpinner } from '../components/LoadingAnimation';
 
 /**
@@ -50,8 +50,7 @@ const VahanStyleHomePage = () => {
       {/* Meet A Vahan Leader - Testimonial with beige background */}
       <MeetLeaderSection />
 
-      {/* How Does It Work - 3 steps */}
-      <HowDoesItWorkSection />
+
 
       {/* In The Press - Press coverage */}
       <InThePressSection />

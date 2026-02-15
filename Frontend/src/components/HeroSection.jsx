@@ -9,18 +9,18 @@ export const HeroSection = () => {
     <div className="min-h-screen relative overflow-hidden pt-24">
 
       {/* Background base color */}
-      <div className="absolute inset-0 bg-[#FFF8E8]" />
+      <div className="absolute inset-0 bg-white" />
 
-      {/* Right side background image */}
+      {/* Background image - responsive handling */}
       <div
-        className="absolute inset-0 bg-no-repeat bg-right bg-contain"
+        className="absolute inset-0 bg-no-repeat bg-center lg:bg-right bg-contain opacity-20 lg:opacity-100 transition-opacity duration-700"
         style={{
           backgroundImage: `url('${heroImage}')`,
         }}
       />
 
-      {/* Left side readable overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#FFF8E8] via-[#FFF8E8]/90 to-transparent" />
+      {/* Overlay - adaptive gradient */}
+      <div className="absolute inset-0 bg-white/60 lg:bg-gradient-to-r lg:from-white lg:via-white/90 lg:to-transparent" />
 
       <div className="container mx-auto px-4 py-12 lg:py-20 relative z-10">
         <div className="flex items-center justify-center min-h-[70vh]">
@@ -30,13 +30,13 @@ export const HeroSection = () => {
             transition={{ duration: 0.8, ease: 'easeOut' }}
             className="space-y-6 lg:space-y-8 text-center max-w-3xl"
           >
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Become a Hiring Bazaar Partner
+            <div className="space-y-4 md:space-y-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold text-gray-900 leading-[1.1] tracking-tight">
+                Become a Hiring<br className="hidden md:block" /> Bazaar Partner
               </h1>
 
-              <p className="text-lg md:text-xl text-gray-700 leading-relaxed">
-                Place more candidates, get new clients , and earn more — without increasing team size.
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
+                Place more candidates, get new clients, and earn more — without increasing team size.
               </p>
             </div>
 
@@ -48,7 +48,7 @@ export const HeroSection = () => {
               <Link to="/auth">
                 <Button
                   size="lg"
-                  className="rounded-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group px-10"
+                  className="rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg hover:shadow-xl transition-all duration-300 group px-10"
                 >
                   Apply as a Partner
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
